@@ -1,36 +1,31 @@
-//Calcula el promedio de una lista de N datos
+Algoritmo El_Patito_Mejorado
 
-Algoritmo Promedio
-	
-	Escribir "Ingrese la cantidad de datos:"
-	Repetir
-		
-		Leer n
-		Si n<=0 Entonces
-			Escribir "El número debe ser positivo y distinto de cero."
-			Escribir "Introduzca un número válido."
-		Fin Si
-		
-	Hasta Que n>0
-	
-	acum<-0
-	
-	Para i<-1 Hasta n Hacer
-		Escribir "Ingrese el dato ",i,":"
-		Repetir
-			Leer dato
-			Si dato<0 Entonces
-				Escribir "El dato debe ser positivo."
-				Escribir "Ingrese el dato ",i,":"
-			Fin Si
-		Hasta Que dato>=0
-		
-		acum<-acum+dato
-	Fin Para
-	
-	prom<-acum/n
-	
-	Escribir "El promedio es: ",prom
-	
+    Definir n1, n2, n3, promedio Como Real
+    Definir seguir Como Caracter
+
+    seguir <- "S"
+
+    Mientras seguir = "S" Hacer
+
+        Escribir "Introduce el primer nÃºmero:"
+        Leer n1
+
+        Escribir "Introduce el segundo nÃºmero:"
+        Leer n2
+
+        Escribir "Introduce el tercer nÃºmero:"
+        Leer n3
+
+        promedio <- (n1 + n2 + n3) / 3
+
+        Escribir "El promedio es: ", promedio
+
+        Escribir "Â¿Deseas calcular otro promedio? (S/N)"
+        Leer seguir
+
+        seguir <- Mayusculas(seguir)
+
+    FinMientras
+
 FinAlgoritmo
 
